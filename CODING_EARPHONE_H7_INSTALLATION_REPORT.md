@@ -3,8 +3,8 @@
 > **执行日期**: 2026-09-07  
 > **运行环境**: macOS 15.x / Darwin 25.x (Apple Silicon M-Series)  
 > **阶段目标**: 固定安装、权限检查、自启动、启停与状态管理、人工验收、防重复与自愈、安全卸载  
-> **H7 最终裁决**: **`H7_PASS`**  
-> **项目控制状态**: **`H7_READY_FOR_EXTERNAL_REVIEW`**  
+> **H7 最终裁决**: **`H7_FULLY_CERTIFIED`** (V0.1 Daily-Use Ready)  
+> **项目控制状态**: **`H7_FULLY_CERTIFIED`** (Ready for Daily Use / H8 Frozen)  
 
 ---
 
@@ -255,16 +255,23 @@ Result: ALL CORE SYSTEM CHECKS PASSED ✅
 
 ---
 
-## 十四、H7 最终验收裁决
+## 十四、H7 最终验收裁决与正式交付认证
 
 ```text
 ==================================================================
-                      FINAL VERDICT: H7_PASS
+        FINAL VERDICT: H7_FULLY_CERTIFIED / V0.1 Daily-Use Ready
 ==================================================================
 ```
 
-各项交付件、可执行文件、运维脚本与测试报告均已达到生产级可用标准，项目状态正式流转至：
+各项交付件、可执行文件、运维脚本与真实人工验收均已 100% 达到生产可用标准：
 
-```text
-H7_READY_FOR_EXTERNAL_REVIEW
-```
+1. **真实会话跨应用切换验收**:
+   - 网易云音乐 (PASSTHROUGH ⚪): 耳机保持原生音量调节与播放/暂停，无键盘干扰。
+   - ChatGPT / Antigravity (ACTIVE 🟢): 耳机中间键成功联动 Typeless 麦克风与文字输入，音量+ 触发 Return/Enter 发送，音量- 触发 Backspace 删除。
+2. **LaunchAgent 登录自启动**:
+   - `~/Library/LaunchAgents/com.local.coding-earphone-mode.plist` 正式部署生效。
+   - 守护进程单实例常驻 (`flock` 内核排他锁防双开)，系统状态 `launch_agent_loaded: yes`, `process_running: yes`。
+3. **阶段控制状态**:
+   - 依据用户明确指令，当前版本正式认证为 **`H7_FULLY_CERTIFIED` / `V0.1 Daily-Use Ready`**。
+   - 阶段任务至此圆满达成，**暂时不需要继续做 H8**，保持当前生产环境长期稳定常驻运行。
+
