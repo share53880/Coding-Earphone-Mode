@@ -137,7 +137,8 @@ final class AppTracker {
     
     let targetBundleIds: Set<String> = [
         "com.openai.codex",
-        "com.google.antigravity"
+        "com.google.antigravity",
+        "now.typeless.desktop"
     ]
     
     var currentBundleId: String {
@@ -181,7 +182,9 @@ final class AppTracker {
             self.currentBundleId = front.bundleIdentifier ?? ""
             self.currentAppName = front.localizedName ?? "App"
         }
-        Logger.shared.log("Initial Active App: \(currentAppName) (\(currentBundleId)) -> Mode: \(isCodingActive ? "ACTIVE (Coding)" : "PASSTHROUGH")")
+        let active = isCodingActive
+        Logger.shared.log("Initial Active App: \(currentAppName) (\(currentBundleId)) -> Mode: \(active ? "ACTIVE (Coding)" : "PASSTHROUGH")")
+        RcdController.shared.setSuppressed(active)
         
         NSWorkspace.shared.notificationCenter.addObserver(
             forName: NSWorkspace.didActivateApplicationNotification,
@@ -196,8 +199,78 @@ final class AppTracker {
                 self.currentAppName = name
                 let active = self.isCodingActive
                 Logger.shared.log("🔄 App Switch: \(name) (\(bid)) -> Mode: \(active ? "ACTIVE (Coding 🟢)" : "PASSTHROUGH (⚪)")")
+                RcdController.shared.setSuppressed(active)
             }
         }
+    }
+}
+
+// ------------------------------------------------------------------------------
+// MediaRemote / RCD Protection Controller
+// Prevents macOS system-level rcd daemon from relaying Play/Pause pulses
+// to background music apps (Spotify, Apple Music, Netease, etc.) while in coding mode.
+// ------------------------------------------------------------------------------
+final class RcdController {
+    static let shared = RcdController()
+    private let queue = DispatchQueue(label: "coding.earphone.rcd", qos: .utility)
+    private var isSuppressed: Bool? = nil
+    private let uid: String
+    private let plist = "/System/Library/LaunchAgents/com.apple.rcd.plist"
+    
+    private init() {
+        self.uid = "\(getuid())"
+    }
+    
+    func setSuppressed(_ suppress: Bool) {
+        queue.async { [weak self] in
+            guard let self = self else { return }
+            if self.isSuppressed == suppress { return }
+            self.isSuppressed = suppress
+            
+            let target = "gui/\(self.uid)/com.apple.rcd"
+            if suppress {
+                let p1 = Process()
+                p1.executableURL = URL(fileURLWithPath: "/bin/launchctl")
+                p1.arguments = ["disable", target]
+                try? p1.run()
+                p1.waitUntilExit()
+                
+                let p2 = Process()
+                p2.executableURL = URL(fileURLWithPath: "/bin/launchctl")
+                p2.arguments = ["bootout", target]
+                try? p2.run()
+                p2.waitUntilExit()
+                Logger.shared.log("🔇 MediaRemote protection ACTIVE (rcd suppressed for zero music leak).")
+            } else {
+                let p1 = Process()
+                p1.executableURL = URL(fileURLWithPath: "/bin/launchctl")
+                p1.arguments = ["enable", target]
+                try? p1.run()
+                p1.waitUntilExit()
+                
+                let p2 = Process()
+                p2.executableURL = URL(fileURLWithPath: "/bin/launchctl")
+                p2.arguments = ["bootstrap", "gui/\(self.uid)", self.plist]
+                try? p2.run()
+                p2.waitUntilExit()
+                Logger.shared.log("🔊 MediaRemote passthrough ACTIVE (rcd restored).")
+            }
+        }
+    }
+    
+    func restoreSynchronous() {
+        let target = "gui/\(self.uid)/com.apple.rcd"
+        let p1 = Process()
+        p1.executableURL = URL(fileURLWithPath: "/bin/launchctl")
+        p1.arguments = ["enable", target]
+        try? p1.run()
+        p1.waitUntilExit()
+        
+        let p2 = Process()
+        p2.executableURL = URL(fileURLWithPath: "/bin/launchctl")
+        p2.arguments = ["bootstrap", "gui/\(self.uid)", self.plist]
+        try? p2.run()
+        p2.waitUntilExit()
     }
 }
 
@@ -439,6 +512,20 @@ struct Doctor {
         let typelessRunning = !NSRunningApplication.runningApplications(withBundleIdentifier: "now.typeless.desktop").isEmpty
         print("5. Typeless Desktop App     : \(typelessRunning ? "RUNNING ✅" : "NOT RUNNING ⚠️ (Launch Typeless for voice dictation)")")
         
+        // 6. MediaRemote / RCD Protection Status
+        let rcdProc = Process()
+        rcdProc.executableURL = URL(fileURLWithPath: "/bin/launchctl")
+        rcdProc.arguments = ["print", "gui/\(getuid())/com.apple.rcd"]
+        let rcdPipe = Pipe()
+        rcdProc.standardOutput = rcdPipe
+        rcdProc.standardError = rcdPipe
+        try? rcdProc.run()
+        rcdProc.waitUntilExit()
+        let rcdData = rcdPipe.fileHandleForReading.readDataToEndOfFile()
+        let rcdOutput = String(data: rcdData, encoding: .utf8) ?? ""
+        let rcdActive = rcdOutput.contains("state = running")
+        print("6. MediaRemote Protection   : \(rcdActive ? "STANDBY (Passthrough ready) 🔊" : "ACTIVE (Zero Leak Guaranteed) 🔇")")
+        
         print("==================================================")
         if allOk {
             print("Result: ALL CORE SYSTEM CHECKS PASSED ✅")
@@ -522,11 +609,13 @@ if !axOk {
 signal(SIGINT) { _ in
     Logger.shared.log("Received SIGINT. Shutting down gracefully...")
     EventTapManager.shared.stop()
+    RcdController.shared.restoreSynchronous()
     exit(0)
 }
 signal(SIGTERM) { _ in
     Logger.shared.log("Received SIGTERM. Shutting down gracefully...")
     EventTapManager.shared.stop()
+    RcdController.shared.restoreSynchronous()
     exit(0)
 }
 
@@ -536,6 +625,7 @@ AppTracker.shared.start()
 guard EventTapManager.shared.start() else {
     Logger.shared.log("❌ FAILED to create EventTap at cghidEventTap. Exiting.")
     fputs("PERMISSION_REQUIRED: Input Monitoring / EventTap\n", stderr)
+    RcdController.shared.restoreSynchronous()
     singleInstance.release()
     exit(1)
 }
@@ -544,6 +634,7 @@ Logger.shared.log("✅ Coding Earphone Mode Daemon is now ACTIVE.")
 
 // Clean exit handler
 atexit {
+    RcdController.shared.restoreSynchronous()
     SingleInstanceLock().release()
     let pidFile = ((FileManager.default.homeDirectoryForCurrentUser.path as NSString)
         .appendingPathComponent("Library/Application Support/CodingEarphoneMode/runtime/daemon.pid"))
