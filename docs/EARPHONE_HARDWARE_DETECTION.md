@@ -17,7 +17,7 @@
 厂商 (Vendor): Apple, Inc.
 Vendor ID (idVendor): 1452 (0x05ac)
 Product ID (idProduct): 4362 (0x110a)
-序列号 (Serial Number): DWH63070BX32FTRAW
+序列号 (Serial Number): <ANONYMIZED_SERIAL>
 设备版本 (bcdDevice): 9808 (98.08)
 传输协议 (Transport): USB (Link Speed: 12Mbps, Full Speed)
 Location ID: 0x00100000 (1048576)
@@ -62,7 +62,7 @@ Location ID: 0x00100000 (1048576)
 2. **硬件稳定唯一标识**:
    - **Vendor ID (VID)**: `0x05ac` (`1452`)
    - **Product ID (PID)**: `0x110a` (`4362`)
-   - **Serial Number**: `DWH63070BX32FTRAW` (具备芯片级独立序列号)
+   - **Serial Number**: `<ANONYMIZED_SERIAL>` (具备芯片级独立序列号)
    - **Product Name**: `USB-C to 3.5mm Headphone Jack Adapter`
 
 3. **Stage H0 验收结论**:

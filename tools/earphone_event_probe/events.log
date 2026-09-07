@@ -28,127 +28,127 @@ Press Ctrl+C to terminate probe.
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
 [01:49:24.009] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
-[01:49:39.148] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:39.148] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
 [01:49:39.162] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
-[01:49:39.311] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:39.311] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
 [01:49:39.329] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100
-[01:49:39.612] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:39.612] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
 [01:49:39.628] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
-[01:49:39.779] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:39.779] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
 [01:49:39.796] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100
-[01:49:40.073] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:40.073] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
 [01:49:40.090] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
-[01:49:40.216] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:40.216] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
 [01:49:40.228] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100
-[01:49:40.529] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:40.529] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
 [01:49:40.542] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
-[01:49:40.681] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:40.681] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
 [01:49:40.696] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100
-[01:49:40.936] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:40.936] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
 [01:49:40.954] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
-[01:49:41.115] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:41.115] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
 [01:49:41.131] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100
-[01:49:50.343] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:50.343] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
 [01:49:50.361] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
-[01:49:50.462] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:50.462] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
 [01:49:50.477] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
-[01:49:50.784] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:50.784] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
 [01:49:50.801] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
-[01:49:50.898] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:50.898] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
 [01:49:50.912] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
-[01:49:51.203] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:51.203] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
 [01:49:51.225] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
-[01:49:51.313] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:51.313] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
 [01:49:51.329] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
-[01:49:51.576] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:51.576] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
 [01:49:51.596] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
-[01:49:51.690] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:51.690] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
 [01:49:51.699] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
-[01:49:52.007] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:52.007] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
 [01:49:52.026] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
-[01:49:52.151] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:52.151] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
 [01:49:52.164] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
-[01:49:53.390] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:53.390] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
 [01:49:53.411] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
-[01:49:53.534] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:53.534] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
 [01:49:53.550] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
-[01:49:53.736] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:53.736] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
 [01:49:53.756] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
-[01:49:53.856] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:53.856] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
 [01:49:53.871] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
-[01:49:54.190] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:54.190] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
 [01:49:54.210] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
-[01:49:54.329] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:54.329] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
 [01:49:54.345] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
-[01:49:54.625] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:54.625] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
 [01:49:54.645] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
-[01:49:54.758] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:54.758] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
 [01:49:54.767] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
-[01:49:54.994] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:54.994] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
 [01:49:55.012] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
-[01:49:55.137] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:55.137] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
 [01:49:55.158] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
-[01:49:59.956] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:49:59.956] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
 [01:49:59.970] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
@@ -638,7 +638,7 @@ Press Ctrl+C to terminate probe.
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
 [01:50:20.693] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
-[01:50:20.694] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:50:20.694] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
 [01:50:20.701] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
@@ -1125,7 +1125,7 @@ Press Ctrl+C to terminate probe.
 [01:52:10.985] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
            UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
 [01:52:10.985] [CGEventTap:KEY] Type: KeyUp, KeyCode: 8, Flags: 0x100
-[01:52:11.466] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:52:11.466] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
 [01:52:11.479] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
@@ -1217,17 +1217,17 @@ Press Ctrl+C to terminate probe.
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
 [01:52:15.578] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
-[01:52:15.647] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:52:15.647] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
 [01:52:15.662] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
 [01:52:15.662] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
-[01:52:17.443] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:52:17.443] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
 [01:52:17.460] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
-[01:52:17.576] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+[01:52:17.576] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: <ANONYMIZED_SERIAL>)
            UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
 [01:52:17.588] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
            Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100

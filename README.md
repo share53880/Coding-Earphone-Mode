@@ -1,74 +1,91 @@
 # Coding Earphone Mode (耳机线控编程助手)
 
-> **版本**: `v0.1.0` (Stage H7 Fully Certified / Daily-Use Ready)  
-> **平台**: macOS 14+ / Darwin (Apple Silicon & Intel)  
-> **依赖**: 苹果 3.5mm EarPods 线控耳机 + USB-C 官方转接头 + [Typeless Desktop](https://typeless.now)
+> 把 3.5mm 苹果有线耳机线控变成 macOS AI Coding 快捷控制器。  
+> 适合希望在 Codex (ChatGPT) / Antigravity 中使用语音输入，同时尽量减少触碰键盘的人。
 
 ---
 
-## 💡 项目简介
+## 🎮 标准环境与键位映射
 
-`Coding Earphone Mode` 是专为 macOS 开发者打造的极简物理线控输入辅助工具。
-无需低头看键盘或点击鼠标，通过手边 3.5mm 苹果线控耳机的三个物理按键，即可在 IDE 与 AI 聊天前台实现高频交互与语音录入。
+当前已验证的标准环境：
+- **系统**: macOS 14+ (Apple Silicon M 系列 & Intel)
+- **硬件**: 苹果官方 3.5mm EarPods 有线耳机 + USB-C 官方转接头
+- **软件**: ChatGPT (Codex) / Antigravity IDE + [Typeless Desktop](https://typeless.now)
+- **Typeless 快捷键**: 保持默认的 `Fn`
 
-### 🎮 键位映射设计
+在此环境下，耳机线控按键映射如下：
 
-仅当前台处于 **Codex / ChatGPT** (`com.openai.codex`) 或 **Antigravity** (`com.google.antigravity`) 时激活：
-
-| 耳机物理按键 | 映射按键 | 功能效果 |
+| 耳机按键 | Coding 模式 (Codex / Antigravity 前台) | 非目标应用 (Music / Safari / 访达) |
 | :--- | :--- | :--- |
-| **中间键 (播放/暂停)** | 原生 `Fn` (KeyCode 63) | 联动唤起 / 停止 **Typeless** 语音麦克风，自动将转写文字填入输入框 |
-| **音量 +** | `Return` (KeyCode 36) | 直接触发消息发送或代码换行（无系统音量 HUD 浮窗干扰） |
-| **音量 −** | `Backspace` (KeyCode 51) | 单击删除单个字符；长按触发 ~12Hz 硬件 repeat 连续删除，松手即停 |
+| **中间键 (Play/Pause)** | **Typeless 开始 / 结束语音录入** | 保持原生：播放 / 暂停 |
+| **音量 +** | **Enter / 发送消息或换行** | 保持原生：系统音量增大 |
+| **音量 −** | **Backspace / 单击删除一个字符** | 保持原生：系统音量降低 |
+| **长按音量 −** | **连续 Backspace (利用硬件 12Hz repeat 连发)** | 保持原生：连续降低音量 |
 
-**无感应用穿透 (Passthrough)**：
-- 切换到 **网易云音乐、Safari、访达 (Finder)** 等任何其他日常应用时，按键 **100% 恢复为 macOS 原生音量加减与音乐播放/暂停**，不拦截、不改写、零按键冲突。
+> 💡 **无需手动切换模式**：当焦点在 Codex / Antigravity 时自动开启；切到网易云音乐、Safari 时自动恢复系统原始媒体控制。
 
 ---
 
-## 🚀 极速安装与部署 (for 朋友快速上手)
+## 💡 这个工具解决什么问题？
 
-### 1. 硬件连接
-- 将 3.5mm 苹果线控耳机插入口径为 Type-C 的转接头；
-- 插入 Mac 的 Type-C / 雷雳接口。
+传统的语音 Coding 往往依然频繁离不开键盘：
+1. 按键盘快捷键启动语音输入；
+2. 说话；
+3. 再按快捷键结束录音；
+4. 移动鼠标点击或按 Enter 发送；
+5. 说错时再伸手去按 Delete 修改。
 
-### 2. 本地一键安装
-克隆本项目到本地，在终端中执行：
+有了 Coding Earphone Mode，手无需抬到键盘上，握着耳机线控即可盲操：  
+👉 **按中键 → 说话 → 再按中键 → 音量+ 发送！**  
+👉 **如果需要修改，按音量− 单删，长按音量− 连删。**
+
+---
+
+## 🚀 极速安装与部署
+
+### 推荐方式：克隆或下载后一键安装
+
+在终端执行：
 
 ```bash
-git clone <本仓库地址>
-cd "耳机 coding"
+git clone https://github.com/share53880/Coding-Earphone-Mode.git
+cd Coding-Earphone-Mode
 ./scripts/install_local.sh
 ```
 
-- 该脚本会自动编译生产二进制并部署至 `~/Library/Application Support/CodingEarphoneMode`；
-- 同时自动配置 `com.local.coding-earphone-mode` 开机自启动。
+脚本会自动：
+1. 编译优化版常驻二进制；
+2. 安装至独立用户目录：`~/Library/Application Support/CodingEarphoneMode`；
+3. 注册 macOS LaunchAgent 实现开机/登录自动静默运行；
+4. 建立单实例保护，杜绝重复进程冲突。
 
-### 3. 授予 macOS 辅助功能权限
-1. 打开 **系统设置 -> 隐私与安全性 -> 辅助功能**；
-2. 点击 `+` 号，将 `~/Library/Application Support/CodingEarphoneMode/bin/coding-earphone` 添加并勾选开启。
+---
 
-### 4. 验证运行
-在终端执行：
-```bash
-./scripts/coding-earphone doctor
-```
-全部检查呈现 `PASSED ✅` 即可戴上耳机开箱即用！
+## 🔑 首次使用需要的 macOS 权限
+
+因为程序需要捕获耳机媒体键并合成键盘事件，首次使用需要授予系统辅助功能权限：
+
+1. 打开 **系统设置 -> 隐私与安全性 -> 辅助功能** (Privacy & Security -> Accessibility)；
+2. 点击右下方 `+` 号，按下快捷键 `Cmd + Shift + G`，输入：  
+   `~/Library/Application Support/CodingEarphoneMode/bin/`
+3. 选择 `coding-earphone` 并确认勾选开启。
+
+> 🛡️ **安全保证**：本工具绝不需要关闭 SIP、绝不加载第三方驱动、绝不篡改系统 TCC 数据库、不以 root 身份运行，完全工作在受限的用户空间。
 
 ---
 
 ## 🛠️ 日常管理指令
 
-工具已提供标准化 CLI 管理脚本：
+安装后，您在终端中可以随时使用管理指令：
 
 ```bash
-# 查询当前前台应用、权限状态与工作模式
+# 查看当前守护进程状态、前台应用、权限与模式
 coding-earphone status
 
-# 运行全面硬件与权限诊断
+# 运行系统诊断 (硬件、权限、Typeless 联动)
 coding-earphone doctor
 
-# 重启守护进程 (如遇登出后会话切换)
+# 平滑重启守护进程
 coding-earphone restart
 
 # 启动 / 停止守护进程
@@ -78,18 +95,27 @@ coding-earphone stop
 
 ---
 
-## 📂 项目架构与关键交付文档
+## 🗑️ 如何完整卸载
 
-- [`src/main.swift`](file:///Users/hanzhen/Documents/ChatGPT/耳机%20coding/src/main.swift): 核心守护进程源码（基于 POSIX flock 独占锁 + CGEventTap + NSWorkspace 监听）
-- [`scripts/coding-earphone`](file:///Users/hanzhen/Documents/ChatGPT/耳机%20coding/scripts/coding-earphone): 日常统一管理 CLI 工具
-- [`docs/DAILY_USE.md`](file:///Users/hanzhen/Documents/ChatGPT/耳机%20coding/docs/DAILY_USE.md): 终端用户极简日常使用指引
-- [`CODING_EARPHONE_H7_INSTALLATION_REPORT.md`](file:///Users/hanzhen/Documents/ChatGPT/耳机%20coding/CODING_EARPHONE_H7_INSTALLATION_REPORT.md): Stage H7 生产安装与人工真实验收完整交付报告
-- [`EARPHONE_FEASIBILITY_REPORT.md`](file:///Users/hanzhen/Documents/ChatGPT/耳机%20coding/EARPHONE_FEASIBILITY_REPORT.md): H0–H3 硬件与 EventTap 可行性研究报告
+如果不再需要该工具，运行一键卸载脚本即可彻底清除：
+
+```bash
+./scripts/uninstall_local.sh
+```
+
+卸载操作只会安全删除工具自身目录、LaunchAgent 及日志，绝对不影响 Typeless、Codex、Antigravity 或其他系统配置。
 
 ---
 
-## 🛡️ 隐私与安全承诺
+## 🔒 隐私与日志保护
 
-- **零内容记录**：本工具绝不记录用户的任何按键字符、代码内容或 Typeless 语音文本；
-- **非侵入架构**：不修改系统 SIP、不加载外部内核驱动（kext）、不注入第三方应用进程；
-- **一键干净卸载**：运行 `./scripts/uninstall_local.sh` 即可完全移除常驻配置与可执行文件，不留残余。
+- **绝对不记录内容**：本工具绝不记录用户说了什么、绝不记录 Typeless 语音转写文字、绝不记录 Prompt 和键盘输入的任何文本；
+- **轻量日志审计**：日志仅用于记录进程启停与前台应用切换（如 `App Switch: ChatGPT -> ACTIVE`），且限制在 2MB 内自动轮转。
+
+---
+
+## 🗺️ 后续版本路线 (Roadmap)
+
+- [x] **V1.0 (Share Edition)**: 核心事件拦截、硬件 12Hz Repeat、Fn 模拟、前台自动判断、LaunchAgent 常驻、一键安装与卸载。
+- [ ] **V1.1 (Compatibility Setup)**: 增加非标准耳机与转接头自适应校准向导，支持不同媒体键码映射。
+- [ ] **V1.2 (App Mapping)**: 支持通过配置文件自由增加目标 App（如 VS Code、Cursor、Terminal 等）。

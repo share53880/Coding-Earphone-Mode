@@ -12,7 +12,7 @@
 ## 一、H4：最小原型实现架构与机制
 
 ### 1. 核心架构设计
-V0.1 原型采用纯原生 Swift 编写（源码位于 [`src/main.swift`](file:///Users/hanzhen/Documents/ChatGPT/耳机%20coding/src/main.swift)），由三个零延迟、高响应性的解耦模块构成：
+V0.1 原型采用纯原生 Swift 编写（源码位于 [`src/main.swift`](src/main.swift)），由三个零延迟、高响应性的解耦模块构成：
 
 ```mermaid
 flowchart TD
@@ -72,7 +72,7 @@ flowchart TD
 
 ## 三、H6：全量验收测试结果
 
-自动化全量测试套件（[`tools/v0_1_verifier/full_h6_verification.py`](file:///Users/hanzhen/Documents/ChatGPT/耳机%20coding/tools/v0_1_verifier/full_h6_verification.py)）对所有验收维度进行了严密覆盖：
+自动化全量测试套件（[`tools/v0_1_verifier/full_h6_verification.py`](tools/v0_1_verifier/full_h6_verification.py)）对所有验收维度进行了严密覆盖：
 
 ### 1. 自动化验收汇总矩阵
 

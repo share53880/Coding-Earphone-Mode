@@ -238,7 +238,7 @@ Result: ALL CORE SYSTEM CHECKS PASSED ✅
 ## 十二、H7.12 登录启动与日常运行设计
 
 - 守护进程开箱即用，通过 `scripts/install_local.sh` 将常驻任务布置于用户专属环境。
-- 提供面向终端用户的极简日常使用指南 [`docs/DAILY_USE.md`](file:///Users/hanzhen/Documents/ChatGPT/耳机%20coding/docs/DAILY_USE.md)，用户日常无需了解任何 Swift 代码或编译细节。
+- 提供面向终端用户的极简日常使用指南 [`docs/DAILY_USE.md`](docs/DAILY_USE.md)，用户日常无需了解任何 Swift 代码或编译细节。
 
 ---
 

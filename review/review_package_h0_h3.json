@@ -9,7 +9,7 @@
     "vendor": "Apple, Inc.",
     "vendor_id_hex": "0x05ac",
     "product_id_hex": "0x110a",
-    "serial_number": "DWH63070BX32FTRAW",
+    "serial_number": "<ANONYMIZED_SERIAL>",
     "transport": "USB",
     "hid_consumer_control_exposed": true,
     "hid_nodes": [

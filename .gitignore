@@ -1,10 +1,17 @@
 .DS_Store
 *.o
 *.dSYM
+bin/
 tools/earphone_event_probe/probe
 tools/fn_simulator_probe/fn_sim
 tools/app_foreground_probe/app_probe
-bin/
 tools/v0_1_verifier/poster
 tools/v0_1_verifier/monitor
 
+# Runtime and local log files
+*.log
+logs/
+runtime/
+*.pid
+*.lock
+dist/

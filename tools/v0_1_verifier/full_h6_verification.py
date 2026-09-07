@@ -4,7 +4,8 @@ import sys
 import time
 import subprocess
 
-REC_DIR = "/Users/hanzhen/Library/Application Support/Typeless/Recordings"
+HOME = os.path.expanduser("~")
+REC_DIR = os.path.join(HOME, "Library/Application Support/Typeless/Recordings")
 POSTER_BIN = "./tools/v0_1_verifier/poster"
 ENGINE_BIN = "./bin/coding_earphone"
 MONITOR_BIN = "./tools/v0_1_verifier/monitor"

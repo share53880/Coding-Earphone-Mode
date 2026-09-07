@@ -26,7 +26,7 @@
 - **制造商 (Vendor)**: `Apple, Inc.`
 - **Vendor ID (VID)**: `0x05ac` (`1452`)
 - **Product ID (PID)**: `0x110a` (`4362`)
-- **序列号 (Serial Number)**: `DWH63070BX32FTRAW` (具备硬件级唯一序列号)
+- **序列号 (Serial Number)**: `<ANONYMIZED_SERIAL>` (具备硬件级唯一序列号)
 - **固件版本 (bcdDevice)**: `9808`
 - **传输协议**: USB 2.0 Full Speed (12 Mbps)
 - **HID 接口节点**:
