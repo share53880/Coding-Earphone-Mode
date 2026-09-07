@@ -1,0 +1,214 @@
+#!/usr/bin/env bash
+set -e
+
+APP_NAME="CodingEarphoneMode"
+INSTALL_DIR="$HOME/Library/Application Support/$APP_NAME"
+BIN_PATH="$INSTALL_DIR/bin/coding-earphone"
+RUNTIME_DIR="$INSTALL_DIR/runtime"
+LOGS_DIR="$INSTALL_DIR/logs"
+PID_FILE="$RUNTIME_DIR/daemon.pid"
+LOCK_FILE="$RUNTIME_DIR/daemon.lock"
+PLIST_LABEL="com.local.coding-earphone-mode"
+PLIST_FILE="$HOME/Library/LaunchAgents/$PLIST_LABEL.plist"
+
+# Fallback to local repo bin if not installed
+if [ ! -f "$BIN_PATH" ]; then
+    REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+    if [ -f "$REPO_DIR/bin/coding-earphone" ]; then
+        BIN_PATH="$REPO_DIR/bin/coding-earphone"
+    fi
+fi
+
+is_process_running() {
+    if [ -f "$PID_FILE" ]; then
+        PID=$(cat "$PID_FILE" 2>/dev/null || echo "")
+        if [ -n "$PID" ] && kill -0 "$PID" 2>/dev/null; then
+            PNAME=$(ps -p "$PID" -o comm= 2>/dev/null || echo "")
+            if [[ "$PNAME" == *"coding-earphone"* ]]; then
+                return 0
+            fi
+        fi
+    fi
+    RUNNING_PID=$(pgrep -f "coding-earphone" | grep -v "$$" || echo "")
+    if [ -n "$RUNNING_PID" ]; then
+        return 0
+    fi
+    return 1
+}
+
+get_running_pid() {
+    if [ -f "$PID_FILE" ]; then
+        PID=$(cat "$PID_FILE" 2>/dev/null || echo "")
+        if [ -n "$PID" ] && kill -0 "$PID" 2>/dev/null; then
+            echo "$PID"
+            return
+        fi
+    fi
+    pgrep -f "coding-earphone" | grep -v "$$" | head -n 1 || echo ""
+}
+
+is_launchd_loaded() {
+    launchctl list 2>/dev/null | grep -q "$PLIST_LABEL"
+}
+
+cmd_start() {
+    if is_process_running; then
+        echo "ALREADY_RUNNING"
+        return 0
+    fi
+    
+    mkdir -p "$RUNTIME_DIR" "$LOGS_DIR"
+    
+    # Start daemon in user session
+    nohup "$BIN_PATH" > "$LOGS_DIR/daemon_stdout.log" 2> "$LOGS_DIR/daemon_stderr.log" &
+    
+    # Wait for daemon to write PID and acquire lock
+    for i in {1..15}; do
+        if is_process_running; then
+            PID=$(get_running_pid)
+            echo "STARTED (PID: $PID)"
+            return 0
+        fi
+        sleep 0.2
+    done
+    
+    echo "ERROR: Failed to start daemon. Check logs at: $LOGS_DIR/coding-earphone.log"
+    return 1
+}
+
+cmd_stop() {
+    if ! is_process_running; then
+        echo "STOPPED"
+        return 0
+    fi
+    
+    PID=$(get_running_pid)
+    
+    # If launchd is supervising, stop it via launchctl as well
+    if [ -f "$PLIST_FILE" ] && is_launchd_loaded; then
+        launchctl stop "$PLIST_LABEL" 2>/dev/null || true
+    fi
+    
+    if [ -n "$PID" ] && kill -0 "$PID" 2>/dev/null; then
+        kill -TERM "$PID" 2>/dev/null || true
+        for i in {1..15}; do
+            if ! kill -0 "$PID" 2>/dev/null; then
+                break
+            fi
+            sleep 0.2
+        done
+        # Force kill if still running
+        if kill -0 "$PID" 2>/dev/null; then
+            kill -9 "$PID" 2>/dev/null || true
+        fi
+    fi
+    
+    # Ensure any remaining instances are terminated
+    killall coding-earphone 2>/dev/null || true
+    
+    rm -f "$PID_FILE" "$LOCK_FILE"
+    echo "STOPPED"
+}
+
+cmd_restart() {
+    cmd_stop
+    sleep 0.5
+    cmd_start
+}
+
+cmd_status() {
+    echo "=================================================="
+    echo "📊 Coding Earphone Mode Status"
+    echo "=================================================="
+    
+    # 1. Installed
+    if [ -x "$INSTALL_DIR/bin/coding-earphone" ]; then
+        echo "installed:             yes ($INSTALL_DIR/bin/coding-earphone)"
+    else
+        echo "installed:             no (Using repo binary if available)"
+    fi
+    
+    # 2. LaunchAgent loaded
+    if is_launchd_loaded; then
+        echo "launch_agent_loaded:   yes ($PLIST_LABEL)"
+    else
+        echo "launch_agent_loaded:   no"
+    fi
+    
+    # 3. Process running & PID
+    if is_process_running; then
+        PID=$(get_running_pid)
+        echo "process_running:       yes"
+        echo "pid:                   $PID"
+    else
+        echo "process_running:       no"
+        echo "pid:                   none"
+    fi
+    
+    # 4. Version & SHA256
+    if [ -x "$BIN_PATH" ]; then
+        VER=$("$BIN_PATH" version 2>/dev/null || echo "0.1.0")
+        HASH=$(shasum -a 256 "$BIN_PATH" 2>/dev/null | awk '{print $1}')
+        echo "version:               $VER"
+        echo "binary_sha256:         $HASH"
+    else
+        echo "version:               unknown"
+        echo "binary_sha256:         none"
+    fi
+    
+    # 5. Permission
+    if [ -x "$BIN_PATH" ]; then
+        if "$BIN_PATH" doctor 2>/dev/null | grep -q "Accessibility Permission : GRANTED"; then
+            echo "permission_status:     Accessibility (GRANTED ✅)"
+        else
+            echo "permission_status:     Accessibility (DENIED ❌)"
+        fi
+    else
+        echo "permission_status:     unknown"
+    fi
+    
+    # 6. Current foreground app & mode
+    if [ -x "$BIN_PATH" ]; then
+        FG_INFO=$("$BIN_PATH" status-foreground 2>/dev/null || echo "APP:Unknown|BUNDLE:Unknown|MODE:UNKNOWN")
+        APP_NAME=$(echo "$FG_INFO" | awk -F'|' '{print $1}' | cut -d':' -f2)
+        APP_BUNDLE=$(echo "$FG_INFO" | awk -F'|' '{print $2}' | cut -d':' -f2)
+        APP_MODE=$(echo "$FG_INFO" | awk -F'|' '{print $4}' | cut -d':' -f2)
+        echo "current_foreground_app: $APP_NAME ($APP_BUNDLE)"
+        echo "mode:                  $APP_MODE"
+    else
+        echo "current_foreground_app: unknown"
+        echo "mode:                  UNKNOWN"
+    fi
+    echo "=================================================="
+}
+
+cmd_doctor() {
+    if [ -x "$BIN_PATH" ]; then
+        "$BIN_PATH" doctor
+    else
+        echo "Error: coding-earphone binary not found."
+        exit 1
+    fi
+}
+
+case "$1" in
+    start)
+        cmd_start
+        ;;
+    stop)
+        cmd_stop
+        ;;
+    restart)
+        cmd_restart
+        ;;
+    status)
+        cmd_status
+        ;;
+    doctor)
+        cmd_doctor
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|status|doctor}"
+        exit 1
+        ;;
+esac
