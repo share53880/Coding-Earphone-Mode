@@ -1,0 +1,105 @@
+{
+  "project": "Coding Earphone Mode",
+  "scope": "Stages H0 to H3 Feasibility Verification",
+  "status": "H0_H3_READY_FOR_EXTERNAL_REVIEW",
+  "technical_verdict": "READY_FOR_V0_1",
+  "evaluated_at": "2026-09-07T01:53:47-07:00",
+  "hardware": {
+    "device_name": "USB-C to 3.5mm Headphone Jack Adapter",
+    "vendor": "Apple, Inc.",
+    "vendor_id_hex": "0x05ac",
+    "product_id_hex": "0x110a",
+    "serial_number": "DWH63070BX32FTRAW",
+    "transport": "USB",
+    "hid_consumer_control_exposed": true,
+    "hid_nodes": [
+      {
+        "class": "AppleUserHIDEventService",
+        "usage_page": 12,
+        "usage": 1,
+        "registry_id": "0x10008e817"
+      },
+      {
+        "class": "AppleUserHIDDevice",
+        "usage_page": 12,
+        "usage": 1,
+        "registry_id": "0x10008e803"
+      }
+    ]
+  },
+  "stage_results": {
+    "H0_hardware_detection": {
+      "verdict": "PASS",
+      "documentation": "docs/EARPHONE_HARDWARE_DETECTION.md"
+    },
+    "H1_button_event_probe": {
+      "verdict": "PASS",
+      "buttons": {
+        "middle_button": {
+          "distinguishable": true,
+          "iohid": { "usage_page": 12, "usage": "0xcd", "name": "Play/Pause" },
+          "cg_event": { "type": 14, "subtype": 8, "keycode": 16, "name": "NX_KEYTYPE_PLAY" }
+        },
+        "volume_up": {
+          "distinguishable": true,
+          "iohid": { "usage_page": 12, "usage": "0xe9", "name": "Volume Increment" },
+          "cg_event": { "type": 14, "subtype": 8, "keycode": 0, "name": "NX_KEYTYPE_SOUND_UP" }
+        },
+        "volume_down": {
+          "distinguishable": true,
+          "iohid": { "usage_page": 12, "usage": "0xea", "name": "Volume Decrement" },
+          "cg_event": { "type": 14, "subtype": 8, "keycode": 1, "name": "NX_KEYTYPE_SOUND_DOWN" }
+        },
+        "volume_down_hold": {
+          "iohid_behavior": "maintains Value: 1 until physical release (Value: 0)",
+          "cg_event_behavior": "generates hardware repeat events (Repeat: 1)",
+          "repeat_frequency_hz": 12.0,
+          "average_repeat_interval_ms": 83.5
+        }
+      },
+      "coexistence_with_system_default": true,
+      "event_log": "tools/earphone_event_probe/events.log"
+    },
+    "H2_fn_simulation": {
+      "verdict": "PASS",
+      "synthesis_mechanism": "CGEvent flagsChanged (KeyCode 63, maskSecondaryFn 0x800000) posted to cghidEventTap",
+      "test_runs": 10,
+      "successful_runs": 10,
+      "success_rate_percent": 100.0,
+      "typeless_integration": "Verified audio recording start/stop cycle generating .ogg recordings in ~/Library/Application Support/Typeless/Recordings",
+      "fallback_strategy": "Typeless app-settings.json featureShortcutBindings.dictationMode allows remapping to modifier combinations (e.g. Ctrl+Option+Space) if synthetic Fn restrictions arise in future OS updates."
+    },
+    "H3_foreground_app_identification": {
+      "verdict": "PASS",
+      "query_mechanism": "NSWorkspace.shared.frontmostApplication and didActivateApplicationNotification",
+      "target_apps": [
+        {
+          "role": "Coding Target",
+          "display_name": "ChatGPT (Codex)",
+          "bundle_id": "com.openai.codex",
+          "executable_path": "/Applications/ChatGPT.app/Contents/MacOS/ChatGPT"
+        },
+        {
+          "role": "Coding Target",
+          "display_name": "Antigravity",
+          "bundle_id": "com.google.antigravity",
+          "executable_path": "/Applications/Antigravity.app/Contents/MacOS/Antigravity"
+        }
+      ],
+      "passthrough_apps": [
+        { "display_name": "Safari", "bundle_id": "com.apple.Safari" },
+        { "display_name": "访达 (Finder)", "bundle_id": "com.apple.finder" },
+        { "display_name": "音乐 (Music)", "bundle_id": "com.apple.Music" }
+      ]
+    }
+  },
+  "constraints_compliance": {
+    "modified_system_config": false,
+    "modified_codex_or_antigravity": false,
+    "modified_typeless": false,
+    "triggered_whisper_memo_handoff": false,
+    "written_to_whisper_memo_bridge": false,
+    "proceeded_to_H4_H6": false,
+    "ready_for_external_review": true
+  }
+}

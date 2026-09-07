@@ -1,0 +1,1291 @@
+==================================================
+🎧 Coding Earphone Mode - Event Probe Tool (Stage H1)
+==================================================
+Listening mode: Pure Monitor (No intercept, No modify)
+Probing:
+  1. CGEventTap (System-defined NX_SYSDEFINED / Media Keys / Key events)
+  2. IOHIDManager (Low-level HID Consumer / Telephony events)
+Press Ctrl+C to terminate probe.
+==================================================
+
+✅ IOHIDManager initialized and listening to Consumer Control devices.
+✅ CGEventTap created successfully at cghidEventTap.
+
+🚀 Event Probe is RUNNING. Please perform tests on earphone buttons...
+[01:49:13.368] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:49:13.494] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:49:20.892] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:49:21.059] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:49:22.759] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:49:22.943] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:49:23.843] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:49:24.009] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:49:39.148] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
+[01:49:39.162] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
+[01:49:39.311] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
+[01:49:39.329] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100
+[01:49:39.612] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
+[01:49:39.628] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
+[01:49:39.779] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
+[01:49:39.796] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100
+[01:49:40.073] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
+[01:49:40.090] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
+[01:49:40.216] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
+[01:49:40.228] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100
+[01:49:40.529] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
+[01:49:40.542] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
+[01:49:40.681] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
+[01:49:40.696] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100
+[01:49:40.936] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
+[01:49:40.954] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
+[01:49:41.115] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
+[01:49:41.131] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100
+[01:49:50.343] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
+[01:49:50.361] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
+[01:49:50.462] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
+[01:49:50.477] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
+[01:49:50.784] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
+[01:49:50.801] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
+[01:49:50.898] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
+[01:49:50.912] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
+[01:49:51.203] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
+[01:49:51.225] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
+[01:49:51.313] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
+[01:49:51.329] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
+[01:49:51.576] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
+[01:49:51.596] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
+[01:49:51.690] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
+[01:49:51.699] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
+[01:49:52.007] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
+[01:49:52.026] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
+[01:49:52.151] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
+[01:49:52.164] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
+[01:49:53.390] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
+[01:49:53.411] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
+[01:49:53.534] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
+[01:49:53.550] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
+[01:49:53.736] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
+[01:49:53.756] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
+[01:49:53.856] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
+[01:49:53.871] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
+[01:49:54.190] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
+[01:49:54.210] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
+[01:49:54.329] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
+[01:49:54.345] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
+[01:49:54.625] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
+[01:49:54.645] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
+[01:49:54.758] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
+[01:49:54.767] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
+[01:49:54.994] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
+[01:49:55.012] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
+[01:49:55.137] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
+[01:49:55.158] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
+[01:49:59.956] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 1
+[01:49:59.970] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=0, Flags=0x100
+[01:50:00.476] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:00.559] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:00.642] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:00.725] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:00.803] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:00.886] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:00.974] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.059] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.142] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.225] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.310] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.394] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.476] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.560] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.646] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.723] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.812] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.894] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:01.977] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.061] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.142] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.227] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.312] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.396] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.478] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.558] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.647] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.731] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.814] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.896] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:02.980] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.064] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.147] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.231] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.316] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.397] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.482] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.567] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.648] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.731] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.816] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.899] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:03.984] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.074] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.150] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.237] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.320] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.403] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.490] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.570] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.657] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.737] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.829] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.908] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:04.993] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.074] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.159] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.242] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.326] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.408] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.492] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.571] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.654] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.736] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.820] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.906] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:05.992] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.074] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.153] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.244] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.316] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.404] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.487] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.571] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.657] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.741] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.825] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.903] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:06.987] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.070] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.160] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.243] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.326] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.410] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.494] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.578] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.658] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.744] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.826] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.911] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:07.994] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.078] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.162] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.244] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.329] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.411] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.493] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.578] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.662] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.744] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.828] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.912] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:08.995] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.079] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.161] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.247] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.329] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.414] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.495] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.579] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.663] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.745] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.831] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.912] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:09.996] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.079] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.164] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.247] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.331] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.415] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.498] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.581] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.665] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.747] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.831] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.914] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:10.999] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:11.082] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:11.164] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:11.249] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:11.336] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:11.421] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:11.503] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:11.587] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:11.669] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:11.754] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:11.837] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:11.920] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.004] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.087] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.173] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.254] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.337] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.420] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.504] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.587] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.673] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.756] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.836] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:12.924] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.000] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.085] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.170] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.257] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.341] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.423] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.508] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.591] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.676] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.752] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.843] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:13.927] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.010] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.093] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.176] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.260] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.345] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.429] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.510] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.593] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.678] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.761] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.845] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:14.929] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.014] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.096] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.181] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.263] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.348] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.431] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.515] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.599] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.683] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.765] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.849] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:15.933] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.016] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.098] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.183] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.265] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.349] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.433] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.519] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.602] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.686] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.770] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.854] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:16.940] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.020] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.104] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.191] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.271] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.353] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.436] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.517] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.606] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.692] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.768] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.854] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:17.937] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.020] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.104] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.190] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.274] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.356] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.441] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.526] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.610] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.693] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.775] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.858] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:18.943] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.026] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.103] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.186] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.276] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.362] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.443] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.528] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.611] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.696] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.777] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.861] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:19.944] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:20.028] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:20.110] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:20.194] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:20.279] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:20.360] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:20.445] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:20.528] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:20.611] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:20.693] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10a01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=DOWN, Repeat=1, Flags=0x100
+[01:50:20.694] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xea (Volume Decrement / Down (0xEA)), Value: 0
+[01:50:20.701] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x10b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_DOWN (Volume -), State=UP, Repeat=0, Flags=0x100
+[01:50:26.193] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:26.376] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:28.659] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:28.809] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:31.676] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:31.809] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:32.074] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 1
+[01:50:32.075] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100108
+[01:50:32.338] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 25
+[01:50:32.338] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:32.339] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x19 (Usage 25), Value: 1
+[01:50:32.339] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 25
+[01:50:32.341] [CGEventTap:KEY] Type: KeyDown, KeyCode: 9, Flags: 0x100108
+[01:50:32.538] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:32.538] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:32.539] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x19 (Usage 25), Value: 0
+[01:50:32.539] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:32.541] [CGEventTap:KEY] Type: KeyUp, KeyCode: 9, Flags: 0x100108
+[01:50:32.575] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 0
+[01:50:32.576] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100
+[01:50:38.876] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:39.009] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:40.975] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:41.109] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:44.026] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:44.175] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:45.192] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:45.359] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:48.576] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:48.658] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:50:49.545] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:49.545] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:49.546] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 1
+[01:50:49.546] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:49.546] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:49.662] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:49.662] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:49.662] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 0
+[01:50:49.662] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:49.663] [CGEventTap:KEY] Type: KeyUp, KeyCode: 124, Flags: 0xa00100
+[01:50:49.733] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:49.733] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:49.733] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 1
+[01:50:49.734] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:49.734] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:49.818] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:49.818] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:49.818] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 0
+[01:50:49.818] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:49.819] [CGEventTap:KEY] Type: KeyUp, KeyCode: 124, Flags: 0xa00100
+[01:50:49.882] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:49.882] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:49.882] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 1
+[01:50:49.883] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:49.884] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:49.966] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:49.966] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:49.966] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 0
+[01:50:49.966] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:49.966] [CGEventTap:KEY] Type: KeyUp, KeyCode: 124, Flags: 0xa00100
+[01:50:50.055] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:50.055] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:50.055] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 1
+[01:50:50.055] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:50.058] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:50.127] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:50.127] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:50.127] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 0
+[01:50:50.128] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:50.128] [CGEventTap:KEY] Type: KeyUp, KeyCode: 124, Flags: 0xa00100
+[01:50:50.205] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:50.206] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:50.206] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 1
+[01:50:50.207] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:50.207] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:50.386] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:50.386] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:50.386] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 0
+[01:50:50.386] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:50.386] [CGEventTap:KEY] Type: KeyUp, KeyCode: 124, Flags: 0xa00100
+[01:50:50.468] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:50.469] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:50.469] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 1
+[01:50:50.469] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:50.469] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:50.971] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:51.054] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:51.138] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:51.224] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:51.307] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:51.391] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:51.393] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:51.393] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:51.393] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 0
+[01:50:51.393] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:51.393] [CGEventTap:KEY] Type: KeyUp, KeyCode: 124, Flags: 0xa00100
+[01:50:52.004] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 42
+[01:50:52.005] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:52.005] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x2a (Usage 42), Value: 1
+[01:50:52.005] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 42
+[01:50:52.007] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:52.507] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:52.591] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:52.674] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:52.757] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:52.841] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:52.925] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.008] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.090] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.173] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.257] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.341] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.425] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.508] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.592] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.676] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.759] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.846] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:53.927] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:54.011] [CGEventTap:KEY] Type: KeyDown, KeyCode: 51, Flags: 0x100
+[01:50:54.016] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:54.016] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:54.016] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x2a (Usage 42), Value: 0
+[01:50:54.017] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:54.017] [CGEventTap:KEY] Type: KeyUp, KeyCode: 51, Flags: 0x100
+[01:50:55.411] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:55.412] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:55.412] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 1
+[01:50:55.412] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:55.412] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:55.536] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:55.536] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:55.536] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 0
+[01:50:55.537] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:55.537] [CGEventTap:KEY] Type: KeyUp, KeyCode: 124, Flags: 0xa00100
+[01:50:55.628] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:55.629] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:55.629] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 1
+[01:50:55.629] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:55.629] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:55.720] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:55.720] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:55.720] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 0
+[01:50:55.720] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:55.723] [CGEventTap:KEY] Type: KeyUp, KeyCode: 124, Flags: 0xa00100
+[01:50:55.800] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:55.800] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:55.800] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 1
+[01:50:55.800] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:55.801] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:55.892] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:55.893] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:55.893] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 0
+[01:50:55.893] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:55.893] [CGEventTap:KEY] Type: KeyUp, KeyCode: 124, Flags: 0xa00100
+[01:50:55.966] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:55.966] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:55.967] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 1
+[01:50:55.967] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:55.967] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:56.035] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:56.035] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:56.035] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 0
+[01:50:56.035] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:56.036] [CGEventTap:KEY] Type: KeyUp, KeyCode: 124, Flags: 0xa00100
+[01:50:56.370] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:56.371] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:56.371] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 1
+[01:50:56.371] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 79
+[01:50:56.374] [CGEventTap:KEY] Type: KeyDown, KeyCode: 124, Flags: 0xa00100
+[01:50:56.498] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:56.499] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:56.499] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x4f (Usage 79), Value: 0
+[01:50:56.499] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:56.499] [CGEventTap:KEY] Type: KeyUp, KeyCode: 124, Flags: 0xa00100
+[01:50:58.575] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 1
+[01:50:58.576] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100108
+[01:50:58.695] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:50:58.696] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:58.697] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 1
+[01:50:58.697] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:50:58.697] [CGEventTap:KEY] Type: KeyDown, KeyCode: 6, Flags: 0x100108
+[01:50:58.835] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 0
+[01:50:58.836] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100
+[01:50:58.875] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:58.876] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:58.876] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 0
+[01:50:58.876] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:58.876] [CGEventTap:KEY] Type: KeyUp, KeyCode: 6, Flags: 0x100
+[01:50:59.411] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 1
+[01:50:59.412] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100108
+[01:50:59.527] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:50:59.527] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:59.528] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 1
+[01:50:59.528] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:50:59.528] [CGEventTap:KEY] Type: KeyDown, KeyCode: 6, Flags: 0x100108
+[01:50:59.631] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 0
+[01:50:59.632] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100
+[01:50:59.663] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:59.664] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:50:59.664] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 0
+[01:50:59.664] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:50:59.664] [CGEventTap:KEY] Type: KeyUp, KeyCode: 6, Flags: 0x100
+[01:50:59.989] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 1
+[01:50:59.991] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100108
+[01:51:00.069] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:51:00.069] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:51:00.069] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 1
+[01:51:00.069] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:51:00.069] [CGEventTap:KEY] Type: KeyDown, KeyCode: 6, Flags: 0x100108
+[01:51:00.173] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 0
+[01:51:00.174] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100
+[01:51:00.261] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:51:00.262] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:51:00.262] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 0
+[01:51:00.262] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:51:00.262] [CGEventTap:KEY] Type: KeyUp, KeyCode: 6, Flags: 0x100
+[01:51:00.517] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 1
+[01:51:00.518] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100108
+[01:51:00.565] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:51:00.565] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:51:00.565] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 1
+[01:51:00.566] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:51:00.566] [CGEventTap:KEY] Type: KeyDown, KeyCode: 6, Flags: 0x100108
+[01:51:00.665] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 0
+[01:51:00.666] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100
+[01:51:00.753] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:51:00.754] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:51:00.754] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 0
+[01:51:00.754] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:51:00.757] [CGEventTap:KEY] Type: KeyUp, KeyCode: 6, Flags: 0x100
+[01:51:00.996] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 1
+[01:51:00.997] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100108
+[01:51:01.024] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:51:01.024] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:51:01.024] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 1
+[01:51:01.025] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:51:01.026] [CGEventTap:KEY] Type: KeyDown, KeyCode: 6, Flags: 0x100108
+[01:51:01.060] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 0
+[01:51:01.061] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100
+[01:51:01.264] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:51:01.265] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:51:01.265] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 0
+[01:51:01.265] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:51:01.265] [CGEventTap:KEY] Type: KeyUp, KeyCode: 6, Flags: 0x100
+[01:51:01.415] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:51:01.415] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:51:01.416] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 1
+[01:51:01.416] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 29
+[01:51:01.416] [CGEventTap:KEY] Type: KeyDown, KeyCode: 6, Flags: 0x100
+[01:51:01.611] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:51:01.611] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:51:01.612] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1d (Usage 29), Value: 0
+[01:51:01.612] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:51:01.612] [CGEventTap:KEY] Type: KeyUp, KeyCode: 6, Flags: 0x100
+[01:51:02.493] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:51:02.625] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:51:22.075] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:51:22.259] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:51:23.626] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:51:23.759] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:51:27.593] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:51:27.725] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:51:48.243] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:51:48.409] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:52:07.775] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:52:09.861] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:52:10.680] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 1
+[01:52:10.681] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100108
+[01:52:10.813] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 6
+[01:52:10.813] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:52:10.813] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x6 (Usage 6), Value: 1
+[01:52:10.814] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 6
+[01:52:10.814] [CGEventTap:KEY] Type: KeyDown, KeyCode: 8, Flags: 0x100108
+[01:52:10.960] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 0
+[01:52:10.961] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100
+[01:52:10.984] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:52:10.985] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:52:10.985] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x6 (Usage 6), Value: 0
+[01:52:10.985] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:52:10.985] [CGEventTap:KEY] Type: KeyUp, KeyCode: 8, Flags: 0x100
+[01:52:11.466] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 1
+[01:52:11.479] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=0, Flags=0x100
+[01:52:11.982] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.060] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.144] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.232] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.320] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.403] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.487] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.567] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.646] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.733] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.813] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.902] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:12.981] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.063] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.150] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.303] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.320] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.396] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.479] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.562] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.648] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.732] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.818] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.906] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:13.990] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.066] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.152] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.235] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.323] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.408] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.491] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.574] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.658] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.741] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.826] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.909] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:14.996] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:15.073] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:15.154] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:15.239] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:15.328] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:15.410] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:15.494] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:15.578] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:15.647] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xe9 (Volume Increment / Up (0xE9)), Value: 0
+[01:52:15.662] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xa01, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=DOWN, Repeat=1, Flags=0x100
+[01:52:15.662] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0xb00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=UP, Repeat=0, Flags=0x100
+[01:52:17.443] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 1
+[01:52:17.460] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100a00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=DOWN, Repeat=0, Flags=0x100
+[01:52:17.576] [IOHID] Device: 'USB-C to 3.5mm Headphone Jack Adapter' (VID: 0x5ac, PID: 0x110a, SN: DWH63070BX32FTRAW)
+           UsagePage: 0xc (12), Usage: 0xcd (Play/Pause (0xCD)), Value: 0
+[01:52:17.588] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 8, Data1: 0x100b00, Data2: 0x-1
+           Parsed: Key=NX_KEYTYPE_PLAY (Play/Pause), State=UP, Repeat=0, Flags=0x100
+[01:52:30.342] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:52:30.475] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:52:32.292] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:52:32.442] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:52:36.142] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:52:36.293] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:52:37.240] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 1
+[01:52:37.241] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100108
+[01:52:37.508] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 25
+[01:52:37.509] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:52:37.509] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x19 (Usage 25), Value: 1
+[01:52:37.509] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 25
+[01:52:37.509] [CGEventTap:KEY] Type: KeyDown, KeyCode: 9, Flags: 0x100108
+[01:52:37.705] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:52:37.705] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:52:37.705] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x19 (Usage 25), Value: 0
+[01:52:37.705] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:52:37.707] [CGEventTap:KEY] Type: KeyUp, KeyCode: 9, Flags: 0x100108
+[01:52:37.781] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xe3 (Usage 227), Value: 0
+[01:52:37.782] [CGEventTap:KEY] Type: FlagsChanged, KeyCode: 55, Flags: 0x100
+[01:52:39.102] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 40
+[01:52:39.102] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:52:39.102] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x28 (Usage 40), Value: 1
+[01:52:39.103] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 40
+[01:52:39.103] [CGEventTap:KEY] Type: KeyDown, KeyCode: 36, Flags: 0x100
+[01:52:39.178] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:52:39.178] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x1 (Usage 1), Value: 0
+[01:52:39.178] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0x28 (Usage 40), Value: 0
+[01:52:39.178] [IOHID] Device: 'Apple Internal Keyboard / Trackpad' (VID: 0x0, PID: 0x0, SN: N/A)
+           UsagePage: 0x7 (7), Usage: 0xffffffff (Usage 4294967295), Value: 0
+[01:52:39.181] [CGEventTap:KEY] Type: KeyUp, KeyCode: 36, Flags: 0x100
+[01:53:17.008] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x1
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
+[01:53:17.192] [CGEventTap:SYSDEFINED] Type: 14, Subtype: 7, Data1: 0x1, Data2: 0x0
+           Parsed: Key=NX_KEYTYPE_SOUND_UP (Volume +), State=STATE_0, Repeat=1, Flags=0x0
