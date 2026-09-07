@@ -41,11 +41,11 @@
 
 ---
 
-## 🚀 极速安装与部署
+## 🚀 两种安装方式 (GitHub 用户 / 离线压缩包朋友)
 
-### 推荐方式：克隆或下载后一键安装
+### 方式 A：GitHub 快速一键安装（推荐）
 
-在终端执行：
+在终端中执行以下单行命令即可自动完成克隆与部署：
 
 ```bash
 git clone https://github.com/share53880/Coding-Earphone-Mode.git
@@ -53,82 +53,84 @@ cd Coding-Earphone-Mode
 ./scripts/install_local.sh
 ```
 
-脚本会自动：
-1. 编译优化版常驻二进制；
-2. 安装至独立用户目录：`~/Library/Application Support/CodingEarphoneMode`；
-3. 注册 macOS LaunchAgent 实现开机/登录自动静默运行；
-4. 建立单实例保护，杜绝重复进程冲突。
+### 方式 B：离线安装包 / 分享压缩包一键安装（免 Git / 朋友分享）
+
+1. 下载或解压分享包 `CodingEarphoneMode-v0.1.0-macOS.zip`；
+2. 双击运行其中的 **`一键安装.command`**（若 macOS 拦截提示「来自未识别开发者」，右键点击选择「打开」即可）；
+3. 脚本会自动编译并安装到个人目录，并注册 LaunchAgent 开机自启。
+
+> 💡 **安装过程完全可逆**：安装不修改系统只读分区，不注入内核驱动，全部资产位于 `~/Library/Application Support/CodingEarphoneMode`，随时可一键完全恢复。
 
 ---
 
-## 🔑 首次使用需要的 macOS 权限
+## 🔑 首次使用：授予辅助功能权限 (唯一必需步骤)
 
-因为程序需要捕获耳机媒体键并合成键盘事件，首次使用需要授予系统辅助功能权限：
+由于 macOS 安全机制，捕获耳机媒体按键并向编辑区合成按键必须获得辅助功能（Accessibility）授权：
 
 1. 打开 **系统设置 -> 隐私与安全性 -> 辅助功能** (Privacy & Security -> Accessibility)；
-2. 点击右下方 `+` 号，按下快捷键 `Cmd + Shift + G`，输入：  
-   `~/Library/Application Support/CodingEarphoneMode/bin/`
-3. 选择 `coding-earphone` 并确认勾选开启。
+2. 点击右下方 `+` 号，在弹出的文件选择器中按下快捷键：  
+   `Cmd + Shift + G`
+3. 复制并粘贴以下路径后回车：  
+   `~/Library/Application Support/CodingEarphoneMode/bin/coding-earphone`
+4. 点击「打开」并确认勾选开启。
 
-> 🛡️ **安全保证**：本工具绝不需要关闭 SIP、绝不加载第三方驱动、绝不篡改系统 TCC 数据库、不以 root 身份运行，完全工作在受限的用户空间。
+> 🛡️ **安全保证**：本工具绝不需要关闭 SIP、绝不加载驱动、不篡改系统 TCC 数据库、不以 root 身份运行，完全工作在受限的用户安全空间。
 
 ---
 
-## 🛠️ 日常管理指令
+## 🛠️ 日常管理与自愈指令
 
-安装后，您在终端中可以随时使用管理指令：
+安装后，全局命令行工具 `coding-earphone` 已自动链接至终端 PATH：
 
 ```bash
-# 查看当前守护进程状态、前台应用、权限与模式
+# 1. 查看守护进程状态、当前前台应用与运行模式
 coding-earphone status
 
-# 运行系统诊断 (硬件、权限、Typeless 联动)
+# 2. 运行系统全项健康诊断 (检测转接头硬件、Accessibility 权限、Typeless 联动)
 coding-earphone doctor
 
-# 平滑重启守护进程
+# 3. 幂等自愈与系统媒体键恢复 (若非正常退出或媒体键异常，一键恢复原生 rcd)
+coding-earphone repair
+
+# 4. 重启守护进程
 coding-earphone restart
 
-# 启动 / 停止守护进程
+# 5. 启动 / 停止守护进程
 coding-earphone start
 coding-earphone stop
 ```
 
 ---
 
-## 🗑️ 如何完整卸载
+## 🗑️ 一键卸载与环境完全恢复
 
-如果不再需要该工具，运行一键卸载脚本即可彻底清除：
+如果需要卸载或把电脑交给他人使用：
 
-```bash
-./scripts/uninstall_local.sh
-```
+- **方式 1 (终端命令)**：运行 `./scripts/uninstall_local.sh`；
+- **方式 2 (离线包用户)**：双击离线包内的 **`一键卸载.command`**。
 
-卸载操作只会安全删除工具自身目录、LaunchAgent 及日志，绝对不影响 Typeless、Codex、Antigravity 或其他系统配置。
-
----
-
-## 🔒 隐私与日志保护
-
-- **绝对不记录内容**：本工具绝不记录用户说了什么、绝不记录 Typeless 语音转写文字、绝不记录 Prompt 和键盘输入的任何文本；
-- **轻量日志审计**：日志仅用于记录进程启停与前台应用切换（如 `App Switch: ChatGPT -> ACTIVE`），且限制在 2MB 内自动轮转。
+卸载程序将：
+1. 彻底退出守护进程并卸载 LaunchAgent 开机项；
+2. **无条件强制复位 macOS 原生 `rcd` 媒体守护进程**，使耳机与键盘所有媒体控制 100% 恢复系统初始状态；
+3. 删除 `~/Library/Application Support/CodingEarphoneMode` 与 CLI 链接。
 
 ---
 
-## ⚠️ 适用与不适用条件声明 (重要)
+## 🔍 环境自检与硬件兼容性矩阵
 
-在下载或安装前，请务必确认您的使用环境：
+在安装或分享给朋友前，请通过 `coding-earphone doctor` 或下表确认环境：
 
-### ✅ 适用条件（100% 验证支持）
-1. **电脑**: macOS 14 及以上系统（Apple Silicon M 系列芯片或 Intel 芯片均可）；
-2. **耳机硬件**: **苹果原装 3.5mm EarPods 有线耳机 + USB-C 官方转接头**（只有该硬件能产生稳定的 12Hz 硬件脉冲与标准媒体键码）；
-3. **目标应用**: 当前前台激活窗口为 **ChatGPT 桌面版 (Codex)** 或 **Antigravity IDE**；
-4. **语音工具**: 已安装运行 **Typeless**，且快捷键保持默认的 **`Fn`**。
+| 硬件 / 软件组件 | 标准支持规格 (100% 验证) | 兼容性现状与说明 |
+| :--- | :--- | :--- |
+| **操作系统** | macOS Sonoma (14.0+) / Sequoia (15.0+) | ✅ Intel 与 Apple Silicon (M1/M2/M3/M4) 原生支持 |
+| **耳机型号** | **Apple EarPods 3.5mm 有线耳机** | ✅ 采用 CTIA 标准线序与物理电阻阶梯，支持 12Hz 退格连发 |
+| **耳机转接头** | **Apple 官方 USB-C 至 3.5mm 耳机插孔转换器** | ✅ 底层识别为标准 USB Audio Device，支持 Native HID 媒体流 |
+| **副厂转接头** | 绿联 / 倍思等 DAC 转接头 | ⚠️ 部分副厂转接头不转发长按 Repeat 事件，单删正常但连删可能需短按多次 |
+| **无线耳机** | AirPods / 索尼降噪耳机等 | ❌ 蓝牙协议音量由耳机本地消化，不发送系统 12Hz 键盘事件 |
+| **目标编辑器** | **ChatGPT 桌面版 (Codex)** / **Antigravity IDE** | ✅ 锁定目标保护，防止在终端、浏览器或文档中误发按键 |
+| **语音工具** | **Typeless Desktop** (默认快捷键: `Fn`) | ✅ 中键双向透传模拟 Fn，支持自动启停录音落盘与转写 |
 
-### ❌ 暂不适用条件（当前版本暂未开放）
-1. **无线蓝牙耳机（如 AirPods、索尼等）**: 蓝牙耳机音量调节由耳机内部固件控制，不会向 Mac 发送 ~12Hz 连续按键事件，长按连删无法生效；
-2. **安卓 3.5mm 耳机或部分副厂转接头**: 线序标准不同（CTIA vs OMTP），可能无法识别中间键或产生错误键码；
-3. **其他代码编辑器（如 VS Code、Cursor、Xcode 等）**: 为防止代码误触，当前版本严格锁定只对 ChatGPT 和 Antigravity 生效；
-4. **自定义了 Typeless 快捷键**: 若将 Typeless 改为 `Option + Space` 等组合键，当前版本派发的原生 `Fn` 将无法调出麦克风。
+> 💡 **Doctor 智能提示**：如果您插入了非官方转接头或未安装 Typeless，运行 `coding-earphone doctor` 会通过 `CONNECTED ✅` / `NOT CONNECTED ⚠️` 明确指出具体缺失项，绝不盲目崩溃。
 
 ---
 

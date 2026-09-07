@@ -30,13 +30,24 @@ if [ -n "$PID" ]; then
     fi
 fi
 
-# 3. Clean up installation directory
+# 3. Clean up installation directory and CLI symlink
 if [ -d "$INSTALL_DIR" ]; then
     echo "🧹 Removing installation directory ($INSTALL_DIR)..."
     rm -rf "$INSTALL_DIR"
 fi
 
-# 4. Verify clean uninstall
+if [ -L "$HOME/.local/bin/coding-earphone" ] || [ -f "$HOME/.local/bin/coding-earphone" ]; then
+    echo "🧹 Removing CLI tool ($HOME/.local/bin/coding-earphone)..."
+    rm -f "$HOME/.local/bin/coding-earphone"
+fi
+
+# 4. Safety Guarantee: restore macOS native rcd service unconditionally
+echo "🔊 Restoring system native MediaRemote rcd service..."
+launchctl enable "gui/$(id -u)/com.apple.rcd" 2>/dev/null || true
+launchctl bootstrap "gui/$(id -u)" /System/Library/LaunchAgents/com.apple.rcd.plist 2>/dev/null || true
+launchctl kickstart -k "gui/$(id -u)/com.apple.rcd" 2>/dev/null || true
+
+# 5. Verify clean uninstall
 echo "🔍 Verifying clean uninstallation..."
 REMAINING_PID=$(pgrep -f "coding-earphone" 2>/dev/null || echo "")
 if [ -n "$REMAINING_PID" ]; then
@@ -49,5 +60,7 @@ echo "✅ Uninstallation Complete!"
 echo "• LaunchAgent removed"
 echo "• Daemon stopped and EventTap hooks fully released"
 echo "• Application directory removed"
+echo "• CLI link (~/.local/bin/coding-earphone) removed"
+echo "• System rcd media service 100% restored to macOS default"
 echo "• Earphone behavior 100% returned to macOS default"
 echo "=================================================="

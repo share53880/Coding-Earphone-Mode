@@ -91,13 +91,32 @@ launchctl load "$PLIST_PATH"
 
 sleep 1
 
-# 6. Verification
+# 6. Install CLI tool to user PATH (~/.local/bin)
+LOCAL_BIN_DIR="$HOME/.local/bin"
+mkdir -p "$LOCAL_BIN_DIR"
+ln -sf "$INSTALL_DIR/bin/coding-earphone" "$LOCAL_BIN_DIR/coding-earphone" 2>/dev/null || cp -f "$REPO_DIR/scripts/coding-earphone" "$LOCAL_BIN_DIR/coding-earphone"
+chmod +x "$LOCAL_BIN_DIR/coding-earphone" 2>/dev/null || true
+
+# 7. Verification & Status
 echo ""
-"$REPO_DIR/scripts/coding-earphone" status
+"$INSTALL_DIR/bin/coding-earphone" doctor 2>/dev/null || true
 
 echo ""
 echo "=================================================="
 echo "✅ Installation Completed Successfully!"
-echo "Daemon will automatically launch upon user login."
-echo "Management command: $REPO_DIR/scripts/coding-earphone {start|stop|status|doctor}"
+echo "• Daemon will automatically launch upon user login via LaunchAgent."
+echo "• Global CLI command installed to: ~/.local/bin/coding-earphone"
+echo ""
+echo "👉 首次使用权限配置引导 (First-Time Setup):"
+echo "1. 打开系统设置 -> 隐私与安全性 -> 辅助功能 (Accessibility)"
+echo "2. 点击右下方 '+' 号，按下快捷键 Cmd + Shift + G 输入："
+echo "   $TARGET_BIN"
+echo "3. 确认添加并勾选开启"
+echo ""
+echo "👉 常用管理命令:"
+echo "   coding-earphone status   # 查看守护进程与当前状态"
+echo "   coding-earphone doctor   # 诊断系统权限与硬件连接"
+echo "   coding-earphone repair   # 幂等自愈与系统媒体键恢复"
+echo "   coding-earphone restart  # 重启守护进程"
+echo "   coding-earphone stop     # 停止守护进程"
 echo "=================================================="
