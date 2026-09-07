@@ -276,8 +276,24 @@ final class EventTapManager {
                 return Unmanaged.passRetained(event)
             }
             
+            // Check if coding mode is active for current frontmost app
+            let isCoding = AppTracker.shared.isCodingActive
+            
+            // Passthrough for non-target apps
+            if !isCoding {
+                return Unmanaged.passRetained(event)
+            }
+            
             let nsEvent = NSEvent(cgEvent: event)
-            guard nsEvent?.subtype.rawValue == 8 else {
+            let subtype = nsEvent?.subtype.rawValue ?? 0
+            
+            // Subtype 7 is macOS auxiliary media control pulse (e.g. play/pause toggles or remote pulses).
+            // When coding mode is active, swallow these pulses so background music players never receive them.
+            if subtype == 7 {
+                return nil
+            }
+            
+            guard subtype == 8 else {
                 return Unmanaged.passRetained(event)
             }
             
@@ -287,14 +303,6 @@ final class EventTapManager {
             let keyState = (keyFlags & 0xFF00) >> 8 // 0xA = down, 0xB = up
             let keyRepeat = keyFlags & 0x1
             
-            // Check if coding mode is active for current frontmost app
-            let isCoding = AppTracker.shared.isCodingActive
-            
-            // Passthrough for non-target apps
-            if !isCoding {
-                return Unmanaged.passRetained(event)
-            }
-            
             // Coding mode active: Intercept and map
             switch mediaKeyCode {
             case 16: // NX_KEYTYPE_PLAY (Middle button)
@@ -302,7 +310,8 @@ final class EventTapManager {
                     Logger.shared.log("[INTERCEPT] Middle Button -> Synthesizing Fn (Typeless)")
                     KeySynthesizer.sendFnAsync()
                 }
-                return nil // Suppress default media play/pause
+                // Suppress both KeyDown (0xA) and KeyUp (0xB) to prevent system media toggle leak
+                return nil
                 
             case 0: // NX_KEYTYPE_SOUND_UP (Volume +)
                 if keyState == 0xA && keyRepeat == 0 {
