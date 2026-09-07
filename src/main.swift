@@ -258,6 +258,39 @@ final class RcdController {
         }
     }
     
+    func isServiceEnabled() -> Bool {
+        let p = Process()
+        p.executableURL = URL(fileURLWithPath: "/bin/launchctl")
+        p.arguments = ["print-disabled", "gui/\(self.uid)"]
+        let pipe = Pipe()
+        p.standardOutput = pipe
+        p.standardError = pipe
+        try? p.run()
+        p.waitUntilExit()
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        let out = String(data: data, encoding: .utf8) ?? ""
+        for line in out.components(separatedBy: "\n") {
+            if line.contains("\"com.apple.rcd\"") {
+                return line.contains("enabled")
+            }
+        }
+        return true
+    }
+    
+    func isProcessRunning() -> Bool {
+        let p = Process()
+        p.executableURL = URL(fileURLWithPath: "/bin/launchctl")
+        p.arguments = ["print", "gui/\(self.uid)/com.apple.rcd"]
+        let pipe = Pipe()
+        p.standardOutput = pipe
+        p.standardError = pipe
+        try? p.run()
+        p.waitUntilExit()
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        let out = String(data: data, encoding: .utf8) ?? ""
+        return out.contains("state = running")
+    }
+
     func restoreSynchronous() {
         let target = "gui/\(self.uid)/com.apple.rcd"
         let p1 = Process()
@@ -271,6 +304,18 @@ final class RcdController {
         p2.arguments = ["bootstrap", "gui/\(self.uid)", self.plist]
         try? p2.run()
         p2.waitUntilExit()
+        
+        let p3 = Process()
+        p3.executableURL = URL(fileURLWithPath: "/bin/launchctl")
+        p3.arguments = ["kickstart", "-k", target]
+        try? p3.run()
+        p3.waitUntilExit()
+    }
+    
+    func repairSynchronous() -> Bool {
+        restoreSynchronous()
+        Thread.sleep(forTimeInterval: 0.3)
+        return isServiceEnabled()
     }
 }
 
@@ -513,18 +558,15 @@ struct Doctor {
         print("5. Typeless Desktop App     : \(typelessRunning ? "RUNNING ✅" : "NOT RUNNING ⚠️ (Launch Typeless for voice dictation)")")
         
         // 6. MediaRemote / RCD Protection Status
-        let rcdProc = Process()
-        rcdProc.executableURL = URL(fileURLWithPath: "/bin/launchctl")
-        rcdProc.arguments = ["print", "gui/\(getuid())/com.apple.rcd"]
-        let rcdPipe = Pipe()
-        rcdProc.standardOutput = rcdPipe
-        rcdProc.standardError = rcdPipe
-        try? rcdProc.run()
-        rcdProc.waitUntilExit()
-        let rcdData = rcdPipe.fileHandleForReading.readDataToEndOfFile()
-        let rcdOutput = String(data: rcdData, encoding: .utf8) ?? ""
-        let rcdActive = rcdOutput.contains("state = running")
-        print("6. MediaRemote Protection   : \(rcdActive ? "STANDBY (Passthrough ready) 🔊" : "ACTIVE (Zero Leak Guaranteed) 🔇")")
+        let rcdEnabled = RcdController.shared.isServiceEnabled()
+        let rcdRunning = RcdController.shared.isProcessRunning()
+        let isCoding = AppTracker.shared.isCodingActive
+        let protectionActive = !rcdEnabled || !rcdRunning
+        
+        print("6. MediaRemote Protection   : \(protectionActive ? "ACTIVE (Zero Leak Guaranteed) 🔇" : "STANDBY (Passthrough ready) 🔊")")
+        print("   - rcd service state      : \(rcdEnabled ? "ENABLED" : "DISABLED")")
+        print("   - rcd process running    : \(rcdRunning ? "RUNNING" : "NOT RUNNING")")
+        print("   - foreground coding mode : \(isCoding ? "ACTIVE (Coding 🟢)" : "PASSTHROUGH (⚪)")")
         
         print("==================================================")
         if allOk {
@@ -551,21 +593,35 @@ if args.count > 1 {
     switch sub {
     case "doctor":
         exit(Doctor.runDoctor())
+    case "repair":
+        print("🔧 Running Coding Earphone Mode Self-Healing & RCD Repair...")
+        let ok = RcdController.shared.repairSynchronous()
+        if ok {
+            print("✅ RCD Service Repair SUCCESS: rcd is ENABLED and running.")
+            exit(0)
+        } else {
+            print("❌ RCD Service Repair FAILED: unable to re-enable com.apple.rcd.")
+            exit(1)
+        }
     case "version", "--version", "-v":
         print("coding-earphone version \(APP_VERSION) (\(APP_BUILD))")
+        exit(0)
+    case "status-permission":
+        let axOk = Doctor.checkAccessibility(prompt: false)
+        print(axOk ? "GRANTED" : "DENIED")
         exit(0)
     case "status-foreground":
         if let front = NSWorkspace.shared.frontmostApplication {
             let bid = front.bundleIdentifier ?? ""
             let name = front.localizedName ?? ""
-            let isCoding = (bid == "com.openai.codex" || bid == "com.google.antigravity")
+            let isCoding = (bid == "com.openai.codex" || bid == "com.google.antigravity" || bid == "now.typeless.desktop")
             print("APP:\(name)|BUNDLE:\(bid)|PID:\(front.processIdentifier)|MODE:\(isCoding ? "ACTIVE" : "PASSTHROUGH")")
         } else {
             print("APP:Unknown|BUNDLE:Unknown|PID:0|MODE:UNKNOWN")
         }
         exit(0)
     case "--help", "-h", "help":
-        print("Usage: coding-earphone [doctor | version | --help]")
+        print("Usage: coding-earphone [doctor | repair | version | --help]")
         print("Runs the Coding Earphone Mode daemon by default.")
         exit(0)
     default:
